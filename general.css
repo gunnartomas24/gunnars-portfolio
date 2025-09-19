@@ -1,0 +1,118 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  background-color: #faecd7;
+}
+.forside {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.forside img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: transparent;
+  width: 100%;
+}
+header img {
+  max-width: 100px;
+  height: auto;
+}
+.bg_gradient {
+  background: linear-gradient(
+    to bottom,
+    #7c1616 0%,
+    #7c1616 20%,
+    #9c2020 20%,
+    #9c2020 40%,
+    #bb2323 40%,
+    #bb2323 60%,
+    #db3535 60%,
+    #db3535 80%,
+    #ff4444 80%
+  );
+}
+footer {
+  background-color: #ffc300;
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+footer p {
+  font-size: 20px;
+  color: #7c1616;
+}
+/*************** Text *********************/
+#title {
+  width: clamp(450px, 60vw, 700px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: clamp(55px, 8vw, 8vw);
+  letter-spacing: 0.3vw;
+  white-space: nowrap;
+  color: #ffe489;
+}
+h2 {
+  font-family: "staatliches", sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  color: #ff4444;
+  padding-top: 50px;
+}
+.grid_1-3 h2 {
+  color: #ffc300;
+}
+
+p {
+  font-family: "crimson text", serif;
+  color: #ffe489;
+  font-size: clamp(20px, 3.5vw, 30px);
+}

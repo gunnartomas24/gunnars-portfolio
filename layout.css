@@ -1,0 +1,92 @@
+.max_width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  h2 {
+    text-align: center;
+  }
+  .grid_1-3 {
+    padding: 50px 20px;
+  }
+  .grid_1-3 img {
+    aspect-ratio: 1 / 1;
+    clip-path: circle(50%);
+    object-fit: cover;
+    width: clamp(200px, 70vw, 400px);
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .grid_1-3 p {
+    padding-bottom: 20px;
+  }
+  .billede_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+  }
+  .billede_grid img {
+    aspect-ratio: 1 / 1;
+    clip-path: inset(2% 2% 2% 2%);
+    object-fit: cover;
+  }
+  .billede_grid img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .billede_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  .grid_1-3 {
+    margin: 0 40px;
+  }
+  .billede_grid {
+    margin: 0 20px;
+  }
+}
+@media (min-width: 901px) {
+  .grid_1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 120px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .grid_1-3 img {
+    width: auto;
+    height: 500px;
+    border-radius: 30px;
+    grid-row: span 5;
+    margin-right: 20px;
+  }
+  .grid_1-3 p {
+    max-width: 65ch;
+  }
+  .right_align {
+    text-align: right;
+    font-size: 100px;
+  }
+  .billede_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  .billede_grid img {
+    aspect-ratio: 1 / 1;
+    clip-path: inset(2% 2% 2% 2%);
+    object-fit: cover;
+  }
+  .billede_grid img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+}
